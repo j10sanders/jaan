@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-scroll';
 
 import config from '../config/index.json';
 import { ContactUsForm } from './ContactUsForm';
@@ -12,7 +11,7 @@ type MenuProps = {
 };
 
 const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
-  const { navigation, company, callToAction } = config;
+  const { company } = config;
   const { name: companyName, logo } = company;
 
   return (
@@ -128,8 +127,8 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
+              {/* <div className="px-2 pt-2 pb-3 space-y-1"> */}
+              {/* {navigation.map((item) => (
                   <Link
                     spy={true}
                     active="active"
@@ -142,12 +141,21 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
                     {item.name}
                   </Link>
                 ))}
-              </div>
+              </div> */}
               <a
-                href={callToAction.href}
-                className={`block w-full px-5 py-3 text-center font-medium text-primary bg-gray-50 hover:bg-gray-100`}
+                href="#"
+                onClick={() => setIsOpen(true)}
+                className={`block w-full px-5 py-3 text-center font-medium text-gray-900 bg-gray-50 hover:bg-gray-100`}
               >
-                {callToAction.text}
+                TENANTS
+              </a>
+
+              <a
+                href="#"
+                onClick={() => setIsOpen(true)}
+                className={`block w-full px-5 py-3 text-center font-medium text-gray-900 bg-gray-50 hover:bg-gray-100`}
+              >
+                CONTACT US
               </a>
             </div>
           </Popover.Panel>
