@@ -4,7 +4,6 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 import config from '../config/index.json';
-import { ContactUsForm } from './ContactUsForm';
 
 type MenuProps = {
   setIsOpen: (open: boolean) => void;
@@ -40,7 +39,7 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
+                    className={` rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
                   >
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -80,23 +79,6 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
             </div>
           </nav>
         </div>
-        <ContactUsForm />
-        {/* <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-          <Dialog.Overlay className="fixed z-10 inset-0 overflow-y-auto" />
-
-          <Dialog.Title>Deactivate account</Dialog.Title>
-          <Dialog.Description>
-            This will permanently deactivate your account
-          </Dialog.Description>
-
-          <p>
-            Are you sure you want to deactivate your account? All of your data
-            will be permanently removed. This action cannot be undone.
-          </p>
-
-          <button onClick={() => setIsOpen(false)}>Deactivate</button>
-          <button onClick={() => setIsOpen(false)}>Cancel</button>
-        </Dialog> */}
 
         <Transition
           as={Fragment}
@@ -109,10 +91,10 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
         >
           <Popover.Panel
             focus
-            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            className=" absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
             <div
-              className={`rounded-lg shadow-md bg-background ring-1 ring-black ring-opacity-5 overflow-hidden`}
+              className={`bg-gray-300	 rounded-lg shadow-md ring-1 ring-black ring-opacity-5 overflow-hidden`}
             >
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
@@ -120,7 +102,7 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
                 </div>
                 <div className="-mr-2">
                   <Popover.Button
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
+                    className={`rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
                   >
                     <span className="sr-only">Close main menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -145,7 +127,7 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
               <a
                 href="#"
                 onClick={() => setIsOpen(true)}
-                className={`block w-full px-5 py-3 text-center font-medium text-gray-900 bg-gray-50 hover:bg-gray-100`}
+                className={`block w-full px-5 py-3 text-center font-medium text-gray-900 hover:bg-gray-100`}
               >
                 TENANTS
               </a>
@@ -153,7 +135,7 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
               <a
                 href="#"
                 onClick={() => setIsOpen(true)}
-                className={`block w-full px-5 py-3 text-center font-medium text-gray-900 bg-gray-50 hover:bg-gray-100`}
+                className={`block w-full px-5 py-3 text-center font-medium text-gray-900 hover:bg-gray-100`}
               >
                 CONTACT US
               </a>
