@@ -5,8 +5,13 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'react-scroll';
 
 import config from '../config/index.json';
+import { ContactUsForm } from './ContactUsForm';
 
-const Menu = () => {
+type MenuProps = {
+  setIsOpen: (open: boolean) => void;
+};
+
+const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
   const { navigation, company, callToAction } = config;
   const { name: companyName, logo } = company;
 
@@ -54,12 +59,14 @@ const Menu = () => {
                   key={item.name}
                   to={item.href}
                   className="font-medium text-gray-100  hover:text-secondary"
+                  onClick={() => setIsOpen(true)}
                 >
                   {item.name}
                 </Link>
               ))}
               <a
                 href="#"
+                onClick={() => setIsOpen(true)}
                 className={`font-medium text-gray-100 hover:text-secondary`}
               >
                 CONTACT US
@@ -67,6 +74,23 @@ const Menu = () => {
             </div>
           </nav>
         </div>
+        <ContactUsForm />
+        {/* <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+          <Dialog.Overlay className="fixed z-10 inset-0 overflow-y-auto" />
+
+          <Dialog.Title>Deactivate account</Dialog.Title>
+          <Dialog.Description>
+            This will permanently deactivate your account
+          </Dialog.Description>
+
+          <p>
+            Are you sure you want to deactivate your account? All of your data
+            will be permanently removed. This action cannot be undone.
+          </p>
+
+          <button onClick={() => setIsOpen(false)}>Deactivate</button>
+          <button onClick={() => setIsOpen(false)}>Cancel</button>
+        </Dialog> */}
 
         <Transition
           as={Fragment}
