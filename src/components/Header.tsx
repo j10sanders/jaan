@@ -50,7 +50,7 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
               </div>
             </div>
             <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-              {navigation.map((item) => (
+              {/* {navigation.map((item) => (
                 <Link
                   spy={true}
                   active="active"
@@ -63,7 +63,14 @@ const Menu: React.FC<MenuProps> = ({ setIsOpen }) => {
                 >
                   {item.name}
                 </Link>
-              ))}
+              ))} */}
+              <a
+                href="#"
+                onClick={() => setIsOpen(true)}
+                className={`font-medium text-gray-100 hover:text-secondary`}
+              >
+                TENANTS
+              </a>
               <a
                 href="#"
                 onClick={() => setIsOpen(true)}

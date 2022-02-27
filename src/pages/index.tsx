@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Dialog } from '@headlessui/react';
+import { useForm } from 'react-hook-form';
 
 import About from '../components/About';
 import Analytics from '../components/Analytics';
@@ -11,7 +12,8 @@ import MainHero from '../components/MainHero';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { register, handleSubmit } = useForm();
+  const onSubmit = () => console.log('submit');
   return (
     <div className={`grid gap-y-16 overflow-hidden bg-black`}>
       {/* <div className={`relative bg-background bg-black`}> */}
@@ -33,9 +35,28 @@ const App = () => {
 
           <div className="relative bg-white rounded max-w-sm mx-auto">
             <Dialog.Title>This will be a form</Dialog.Title>
-            <Dialog.Description>No styling yet</Dialog.Description>
+            <Dialog.Description>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <label>First name</label>
+                <input
+                  {...register('firstName', { required: true, maxLength: 20 })}
+                />
+                <label>Last name</label>
+                <input {...register('lastName', { pattern: /^[A-Za-z]+$/i })} />
+                <label>Email</label>
+                <input
+                  type="email"
+                  {...register('email', { required: true })}
+                />
+                <label>Phone number</label>
+                <input type="tel" {...register('tel', { required: true })} />
+                <label>Message</label>{' '}
+                <input type="text" {...register('text', { required: true })} />
+                <input type="submit" />
+              </form>
+            </Dialog.Description>
 
-            <p>Styling</p>
+            <p>Styling will come soon :)</p>
 
             {/* <button onClick={() => setIsOpen(false)}>Deactivate</button>
             <button onClick={() => setIsOpen(false)}>Cancel</button> */}
