@@ -13,7 +13,7 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`bg-background grid gap-y-16 overflow-hidden bg-black`}>
+    <div className={`grid gap-y-16 overflow-hidden bg-black`}>
       {/* <div className={`relative bg-background bg-black`}> */}
       {/* <div className="max-w-7xl mx-auto bg-black"> */}
       {/* <div
