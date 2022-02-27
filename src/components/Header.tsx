@@ -12,7 +12,7 @@ const Menu = () => {
 
   return (
     <>
-      <svg
+      {/* <svg
         className={`hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2`}
         fill="currentColor"
         viewBox="0 0 100 100"
@@ -20,12 +20,12 @@ const Menu = () => {
         aria-hidden="true"
       >
         <polygon points="50,0 100,0 50,100 0,100" />
-      </svg>
+      </svg> */}
 
       <Popover>
         <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
           <nav
-            className="relative flex items-center justify-between sm:h-10 lg:justify-start"
+            className="relative flex items-center justify-between sm:h-10 lg:justify-apart"
             aria-label="Global"
           >
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -53,16 +53,16 @@ const Menu = () => {
                   duration={1000}
                   key={item.name}
                   to={item.href}
-                  className="font-medium text-gray-500 hover:text-gray-900"
+                  className="font-medium text-gray-100  hover:text-secondary"
                 >
                   {item.name}
                 </Link>
               ))}
               <a
                 href="#"
-                className={`font-medium text-primary hover:text-secondary`}
+                className={`font-medium text-gray-100 hover:text-secondary`}
               >
-                Call to action
+                CONTACT US
               </a>
             </div>
           </nav>

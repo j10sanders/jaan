@@ -1,33 +1,20 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "Toresco",
     "logo": "/assets/images/logo.png"
   },
   "navigation": [
     {
-      "name": "Product",
-      "href": "product"
-    },
-    {
-      "name": "Features",
-      "href": "features"
-    },
-
-    {
-      "name": "Pricing",
-      "href": "pricing"
-    },
-    {
-      "name": "About",
-      "href": "about"
+      "name": "TENANTS",
+      "href": "tenants"
     }
   ],
   "callToAction": {
-    "text": "Get started",
-    "href": "#"
+    "text": "Contact Us",
+    "href": "contact"
   },
   "mainHero": {
-    "title": "Use me as your",
+    "title": "BUILDING TIMELESS COMMUNITIES",
     "subtitle": "landing page.",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "img": "/assets/images/happyTeam.jpeg",
@@ -146,8 +133,8 @@
     ],
     "socialMedia": {
       "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+      "twitter": "https://twitter.com/jaaaaan",
+      "linkedin": "https://www.linkedin.com/in/jaaaan/"
     }
   }
 }
