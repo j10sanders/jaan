@@ -45,14 +45,7 @@ const About = () => {
             </svg>
           </a>
         </div>
-        <div className="flex items-center mt-6">
-          <p className="mt-6 text-xs lg:text-sm leading-none text-gray-400 dark:text-gray-50">
-            &copy; {new Date().getFullYear()} designed by{' '}
-            <a href="" rel="nofollow">
-              JAAAAAAN
-            </a>
-          </p>
-        </div>
+        <div className="flex items-center mt-6"></div>
       </div>
     </div>
   );
